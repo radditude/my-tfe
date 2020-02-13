@@ -10,6 +10,10 @@ variable "organization" {
   type = "string"
 }
 
+variable "email" {
+  type = "string"
+}
+
 variable "workspace_count" {
   type = "string"
 }
@@ -20,4 +24,8 @@ variable "branch" {
 
 variable "repo" {
   type = "string"
+}
+
+variable "team_members" {
+  type = list(string)
 }
