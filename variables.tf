@@ -1,29 +1,29 @@
 variable "hostname" {
-  type = "string"
+  type = string
 }
 
 variable "oauth_token" {
-  type = "string"
+  type = string
 }
 
 variable "organization" {
-  type = "string"
+  type = string
 }
 
 variable "email" {
-  type = "string"
+  type = string
 }
 
 variable "workspace_count" {
-  type = "string"
+  type = string
 }
 
 variable "branch" {
-  type = "string"
+  type = string
 }
 
 variable "repo" {
-  type = "string"
+  type = string
 }
 
 variable "team_members" {
