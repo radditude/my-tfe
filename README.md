@@ -1,33 +1,15 @@
 # my-tfe
 
-Clone this repo to your local machine.
+This configuration will produce a whole mess of organizations, teams, and users. Each user created will be invited to each organization and added to every team in every organization.
 
-## Setup Vars
+Note that you'll need to manually accept the invitation in order to actually use any of the user accounts created.
+
+## How to use
+
 ```
 cp terraform.tfvars.example terraform.tfvars
 ```
 
-### Oauth Token
-Go to github and create a [personal access token](https://github.com/settings/tokens/new)
-with the `repo` and `admin:repo_hook` scopes. Use this generated value for your
-`oauth_token` value in `terraform.tfvars`.
+Fill in the variable values with your TFE token and some base data. Then run `terraform plan` to see what will be created.
 
-### Hostname
-```
-rake tfe:local:info
-```
-Use the hostname portion of the url returned in the above command as your
-`hostname` value in `terraform.tfvars`.
-
-
-## Usage
-After nuking, you will need to create a new API token in the TFE UI and set it
-up properly with a [terraform credentials file](https://www.terraform.io/docs/commands/cli-config.html#available-settings). In the future, we may be able
-to write a script to handle this automatically.
-
-I personally setup branches for each environment I regularly use like:
-* prod/duckduck
-* prod/duckduck-with-queue-manager
-* oasis/duckduck
-* local/duckduck
-* ...
+Once you've adjusted things to your satisfaction, run `terraform apply` to make it happen.

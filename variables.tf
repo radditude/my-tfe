@@ -2,15 +2,15 @@ variable "hostname" {
   type = string
 }
 
-variable "oauth_token" {
+variable "tfe_token" {
   type = string
 }
 
-variable "organization" {
+variable "org_base_name" {
   type = string
 }
 
-variable "email" {
+variable "organization_count" {
   type = string
 }
 
@@ -18,14 +18,18 @@ variable "workspace_count" {
   type = string
 }
 
-variable "branch" {
+variable "team_count" {
   type = string
 }
 
-variable "repo" {
+variable "user_count" {
   type = string
 }
 
-variable "team_members" {
-  type = list(string)
+variable "email_base" {
+  type = string
+}
+
+variable "email_domain" {
+  type = string
 }
